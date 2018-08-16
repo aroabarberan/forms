@@ -16,12 +16,11 @@ class Form extends React.Component {
 
   submit(evt) {
     evt.preventDefault();
-
-    console.log('asdas' + { [evt.target.name]: evt.target.value })
+    const { form } = this.props.friends
     this.props.addFriend({
-      name: this.props.friends.form[0].name,
-      last_name: this.props.friends.form[1].last_name,
-      phone: this.props.friends.form[2].phone,
+      name: form[0].name,
+      last_name: form[1].last_name,
+      phone: form[2].phone,
     })
 
   }
